@@ -58,7 +58,7 @@ def main():
 
     for d in DEADLINES:
         days_left = (d["date"] - today).days
-        if days_left == 1:
+        if days_left >= 0:
             subject_list = "\n".join([f"  • {s}" for s in d["subjects"]])
             alerts.append(
                 f"⚠️ <b>DEADLINE TOMORROW</b>\n"
